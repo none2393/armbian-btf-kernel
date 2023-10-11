@@ -41,6 +41,7 @@ jobs:
       - name: cleanup #https://github.com/actions/checkout/issues/211
         run: |
           sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+          sudo rm -rf armbian
 
       - uses: actions/checkout@v3
         with:
