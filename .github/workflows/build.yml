@@ -42,6 +42,7 @@ jobs:
         run: |
           sudo chown -R $USER:$USER $GITHUB_WORKSPACE
           sudo rm -rf armbian
+          sudo rm -rf /home/runner/work/_temp/
 
       - uses: actions/checkout@v3
         with:
