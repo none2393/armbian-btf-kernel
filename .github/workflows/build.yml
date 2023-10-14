@@ -90,8 +90,8 @@ jobs:
       - name: Extract Output
         id: output
         run: |
-          cd build/output/packages-hashed/
-          fname=$(ls --format single-column kernel-*.tar | head -n 1)
+          cd build/output/debs/
+          fname=$(ls --format single-column kernel-*.deb | head -n 1)
           fpath=$(realpath ${fname})
           echo "FILE_DISPLAY_NAME=${fname}" >> $GITHUB_OUTPUT
           echo "FILEPATH=${fpath}" >> $GITHUB_OUTPUT
